@@ -1,22 +1,24 @@
-from typing import Tuple, List, Any, Union
-
 import numpy as np
 import yaml
 from numpy import ndarray
+from typing import *
 
 from modules import read
+
+# Some needed stuff
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.model_selection import train_test_split
 import datetime
-from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
 from sklearn.model_selection import KFold, cross_val_score
+
+# Classifiers
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
-from typing import *
 
 
 def reload_config(path: str) -> dict[str, Any]:
