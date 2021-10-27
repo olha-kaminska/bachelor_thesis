@@ -1,0 +1,19 @@
+data: 'rawdata/spam.csv'
+test_size: 0.3
+seed: 11
+k_folds: 5
+knn:
+    param: 'n_neighbors'
+    values: 'range(2, 20)'
+mnb:
+    param: 'alpha'
+    values: '[0., 0.2, 0.4, 0.6, 0.8, 1]'
+lr: 
+    param: 'C'
+    values: '[0.001, 0.001, 0.01, 0.1, 1, 5, 10]'
+dtc:
+    param: 'max_depth'
+    values: 'range(2, 50, 5)'
+svc:
+    param: 'kernel'
+    values: '["linear", "poly", "rbf", "sigmoid"]'
